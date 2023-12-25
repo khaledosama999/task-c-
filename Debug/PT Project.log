@@ -1,0 +1,12 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  Statement.cpp
+  ApplicationManager.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  ValueAssign.cpp
+  Output.cpp
+  Input.cpp
+  Connector.cpp
+  AddValueAssign.cpp
+  PT Project.vcxproj -> D:\ⓎOⓊⓈⓈⒺⒻ\Phase 2\Phase 2\Phase2_Code\Debug\PT Project.exe
