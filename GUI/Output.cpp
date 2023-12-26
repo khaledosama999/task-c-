@@ -90,6 +90,8 @@ void Output::CreateDesignToolBar() //Draws the Design Menu
 	MenuItemImages[ITM_EXIT] = "images\\Exit.jpg";
 
 
+	//TO DO IMAGESSSSSSSSSSSSSSSSSSSSSSSSS
+
 	//TODO: Prepare images for each menu item and add it to the list
 
 

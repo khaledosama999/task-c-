@@ -16,13 +16,13 @@ private:
 	// in the data members of the actions
 	// we put the paramaters of the action
 	// to be set in ReadActionParameters() then used in Execute()
-
+	double Righths;
+	string Lefths;
 	Point Position;	//Position where the user clicks to add the stat.
 	//TODO: you should add LHS and RHS of the assignment statement as parameters
 
 public:
 	AddValueAssign(ApplicationManager *pAppManager);
-
 	//Read Assignemt statements position
 	virtual void ReadActionParameters();
 	

@@ -4,7 +4,7 @@
 #include "..\defs.h"
 #include "..\Connector.h"
 //class Output;
-#include "..GUI\Output.h"
+#include "..\GUI\Output.h"
 
 //Base class for all Statements
 class Statement
@@ -26,7 +26,7 @@ public:
 
 	virtual void Draw(Output* pOut) const  = 0 ;	//Draw the statement
 	
-	virtual void Simulate();
+	
 
 	///TODO:The following functions should be supported by the Statement class
 	///		It should then be overridden by each derived Statement
@@ -45,5 +45,4 @@ public:
 	///TODO: Add more functions if needed
 
 };
-
 #endif

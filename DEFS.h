@@ -73,6 +73,7 @@ enum DesignMenuItem //The items of the design menu --> THE ORDER MATTERS
 	ITM_PASTE,
 	ITM_CUT,
 	ITM_LOAD,
+	// "yahia": zawedy item design exit aw as u like;
 
 	ITM_SWITCH_SIM_MODE,
 

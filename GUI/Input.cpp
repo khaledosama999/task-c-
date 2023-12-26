@@ -1,4 +1,3 @@
-
 #include "Input.h"
 #include "Output.h"
 
@@ -40,7 +39,6 @@ double Input::GetValue(Output* pO) const
 	string str = GetString(pO);
 	while (!IsValue(str))
 	{
-		pO->PrintMessage("Please enter a valid value");
 		str = GetString(pO);
 	}
 	D = StringToDouble(str);
@@ -117,6 +115,7 @@ ActionType Input::GetUserAction() const
 			case ITM_SWITCH_SIM_MODE: return SWITCH_SIM_MODE;
 			case ITM_EXIT: return EXIT;
 			default: return DSN_TOOL;
+				//Kamely el ba2y bnfs el tari2a 	ana katebhom fel defs.h
 			}
 		}
 
@@ -132,6 +131,7 @@ ActionType Input::GetUserAction() const
 		//[3] User clicks on the status bar
 		return STATUS;
 	}
+	// TODO: This should be changed after creating the compelete simulation bar 
 	else {
 		switch (ClickedItem) {
 		case ITM_VALIDATE: return VALIDATE_ACTION;	//Validate
@@ -146,3 +146,5 @@ ActionType Input::GetUserAction() const
 Input::~Input()
 {
 }
+
+

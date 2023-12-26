@@ -1,5 +1,12 @@
 #include "ApplicationManager.h"
 #include "Actions\AddValueAssign.h"
+#include "Actions\Addcondition.h"
+#include"Addstart.h"
+#include"AddEnd.h"
+#include"AddRead.h"
+#include"Addwrite.h"
+#include"AddVariableAssign.h"
+#include"AddOperatorAssign.h"
 #include "GUI\Input.h"
 #include "GUI\Output.h"
 
@@ -49,9 +56,26 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 
 		case ADD_CONDITION:
 			///create AddCondition Action here
-
+			pAct = new Addcondition(this);
 			break;
-
+		case ADD_START:
+			pAct = new Addstart(this);
+			break;
+		case ADD_END:
+			pAct = new AddEnd(this);
+			break;
+		case ADD_READ:
+			pAct = new AddRead(this);
+			break;
+		case ADD_WRITE:
+			pAct = new Addwrite(this);
+			break;
+		case ADD_VAR_ASSIGN:
+			pAct = new AddVariableAssign(this);
+			break;
+		case ADD_OPER_ASSIGN:
+			pAct = new AddOperatorAssign(this);
+			break;
 		case SELECT:
 			///create Select Action here
 
@@ -60,9 +84,6 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		case EXIT:
 			///create Exit Action here
 			
-			break;
-		case VALIDATE_ACTION:
-
 			break;
 		
 		case STATUS:
@@ -97,7 +118,7 @@ Statement *ApplicationManager::GetStatement(Point P) const
 {
 	//If this point P(x,y) belongs to a statement return a pointer to it.
 	//otherwise, return NULL
-	
+
 
 	///Add your code here to search for a statement given a point P(x,y)	
 	///WITHOUT breaking class responsibilities

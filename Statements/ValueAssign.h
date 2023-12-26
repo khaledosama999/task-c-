@@ -11,7 +11,7 @@ private:
 	string LHS;	//Left Handside of the assignment (name of a variable)
 	double RHS;	//Right Handside (Value)
 	
-	Connector *pOutConn;	//Value Assignment Stat. has one Connector to next statement
+	Connector *pOutConn=NULL;	//Value Assignment Stat. has one Connector to next statement
 	                        //Each statement type in flowchart has a predefined number of (output) connectors
 	                        //For example, conditional statement always has 2 output connectors
 
@@ -25,12 +25,12 @@ private:
 	Point Outlet;	//A point a connection leaves this statement
 	                //It's used as the (Start) point of the (Output) connector
 
-	Point LeftCorner;	//left corenr of the statement block.
+	Point Center;
 
 	virtual void UpdateStatementText();
 	
 public:
-	ValueAssign(Point Lcorner, string LeftHS="", double RightHS=0);
+	ValueAssign(Point center ,string lefths,double righths);
 	
 	void setLHS(const string &L);
 	void setRHS(double R);

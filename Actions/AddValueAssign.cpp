@@ -11,8 +11,7 @@
 using namespace std;
 
 //constructor: set the ApplicationManager pointer inside this action
-AddValueAssign::AddValueAssign(ApplicationManager *pAppManager):Action(pAppManager)
-{}
+AddValueAssign::AddValueAssign(ApplicationManager *pAppManager):Action(pAppManager) {}
 
 void AddValueAssign::ReadActionParameters()
 {
@@ -22,15 +21,17 @@ void AddValueAssign::ReadActionParameters()
 	//Read the (Position) parameter
 	pOut->PrintMessage("Value Assignment Statement: Click to add the statement");
 
-	pIn->GetPointClicked(Position);
-	pOut->ClearStatusBar();		
+	pIn->GetPointClicked(Position);	
 
-	//TODO: Ask the user in the status bar to enter the LHS and set the data member
+	pOut->PrintMessage("Click to enter the LHS: ");
+	pIn->GetPointClicked(Point(0, 0));
+	Lefths = pIn->GetVariable(pOut);
 
-	//TODO: Ask the user in the status bar to enter the RHS and set the data member
+	pOut->PrintMessage("Click to enter the RHS: ");
+	pIn->GetPointClicked(Point(0, 0));
+	Righths = pIn->GetValue(pOut);
 
-	//Note: You should validate the LHS to be variable name and RHS to be a value
-	//      Call the appropriate functions for this.
+	pOut->ClearStatusBar();
 }
 
 void AddValueAssign::Execute()
@@ -43,10 +44,9 @@ void AddValueAssign::Execute()
 	Corner.x = Position.x - UI.ASSGN_WDTH/2;
 	Corner.y = Position.y ;
 	
-	ValueAssign *pAssign = new ValueAssign(Corner, "", 0);
+	ValueAssign *pAssign = new ValueAssign(Corner, Lefths, Righths);
 	//TODO: should set the LHS and RHS of pAssign statement
 	//      with the data members set and validated before in ReadActionParameters()
-
 	pManager->AddStatement(pAssign); // Adds the created statement to application manger's statement list
 }
 
