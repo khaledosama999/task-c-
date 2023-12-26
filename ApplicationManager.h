@@ -16,7 +16,7 @@ class ApplicationManager
 private:
 	int StatCount;		//Actual number of statements
 	int ConnCount;		//Actual number of connectors
-	Statement* StatList[MaxCount];	//List of all statements (Array of pointers)
+	Statement* StatList[MaxCount];	//List of all statements (Array of statements)
 	Connector* ConnList[MaxCount];	//List of all connectors (Array of pointers)
 
 	Statement *pSelectedStat; //a pointer to the last selected statement
@@ -57,7 +57,8 @@ public:
 	Input *GetInput() const;        //Return pointer to the input
 	Output *GetOutput() const;      //Return pointer to the output
 	void UpdateInterface() const;	//Redraws all the drawing window
-	
+
+	void validate() const; //validates the flowchart
 };
 
 #endif

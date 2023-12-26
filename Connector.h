@@ -27,8 +27,7 @@ public:
 	Point getEndPoint();
 
 	void Draw(Output* pOut) const;
-	
-
+	void validate();
 };
 
 #endif

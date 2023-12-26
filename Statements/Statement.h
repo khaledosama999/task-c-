@@ -23,6 +23,7 @@ public:
 	Statement();
 	void SetSelected(bool s);
 	bool IsSelected() const;
+	virtual void validate();
 
 	virtual void Draw(Output* pOut) const  = 0 ;	//Draw the statement
 	

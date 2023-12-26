@@ -172,7 +172,20 @@ Input *ApplicationManager::GetInput() const
 //Return a pointer to the output
 Output *ApplicationManager::GetOutput() const
 {	return pOut; }
-////////////////////////////////////////////////////////////////////////////////////
+//////////////////////
+
+void validate(){
+	//TODO: 1- loop over StatList, make sure there is only one start and one end
+	// that can be done by checking the type of each statement
+
+	//TODO: 2- using the StatList, and ConnList, start from the start statement find it's connector and follow it to the next statement and so on
+	// Traverse it like a graph with nodes, make sure you use a data structure like set to keep track of each statement visited and so on, and same for connections
+
+	// after traversing all the statements and connectors, the set of statements should be the same size as StatList, and set of the Connections should be the same size as ConnList
+
+	//TODO: 3- now we need to validate each statement/connec list individually,
+	//we can loop over the StatList and ConnList and call their validate function, so each statement and connec can verify their input 
+}//////////////////////////////////////////////////////////////
 
 
 //Destructor
