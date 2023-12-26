@@ -20,6 +20,8 @@ public:
 	void		setDstStat(Statement *Dst);
 	Statement*	getDstStat();
 
+	// TODO: Add the connector to each statement, as out connector to src and in connector to dst using the statment add connector functions
+
 	void setStartPoint(Point P);
 	Point getStartPoint();
 

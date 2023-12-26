@@ -27,7 +27,10 @@ public:
 
 	virtual void Draw(Output* pOut) const  = 0 ;	//Draw the statement
 	
-	
+	virtual void addInputConnector(Connector* conn) 
+	virtual void deleteInputConnector(Connector* conn) 
+	virtual void addOutputConnector(Connector* conn) 
+	virtual void deleteOutputConnector(Connector* conn) 
 
 	///TODO:The following functions should be supported by the Statement class
 	///		It should then be overridden by each derived Statement
@@ -38,7 +41,7 @@ public:
 
 	//virtual void Edit() = 0;		//Edit the Statement parameter
 
-	//virtual void Simulate();	//Execute the statement in the simulation mode
+	//TODO virtual void Simulate();	//Execute the statement in the simulation mode
 
 	//[BONUS] virtual void GenerateCode(ofstream &OutFile) = 0;	//write the statement code to a file
 

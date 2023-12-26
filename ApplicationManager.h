@@ -23,7 +23,7 @@ private:
 	                          //you can set and get this pointer
 	Statement *pClipboard;    //a pointer to the last copied/cut statement
 	                          //you can set and get this pointer
-
+	Map<String, double> variables; //a map of all variables in the flowchart
 	//Pointers to Input and Output classes
 	Input *pIn;
 	Output *pOut;
@@ -57,8 +57,16 @@ public:
 	Input *GetInput() const;        //Return pointer to the input
 	Output *GetOutput() const;      //Return pointer to the output
 	void UpdateInterface() const;	//Redraws all the drawing window
+	bool setVariable(String variableName, double value) {
+		// Set/Update the variable value in the map 
+	}
+
+	double getVariable(String variableName) {
+		// return the the variable from the map
+	}
 
 	void validate() const; //validates the flowchart
+	void simulate();
 };
 
 #endif

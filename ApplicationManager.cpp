@@ -17,6 +17,7 @@ ApplicationManager::ApplicationManager()
 	pOut = new Output;
 	pIn = pOut->CreateInput();
 	
+	
 	StatCount = 0;
 	ConnCount = 0;
 	pSelectedStat = NULL;	//no Statement is selected yet
@@ -187,6 +188,15 @@ void validate(){
 	//we can loop over the StatList and ConnList and call their validate function, so each statement and connec can verify their input 
 }//////////////////////////////////////////////////////////////
 
+void simulate(){
+	//TODO 1- call validate function
+
+	//TODO 2- find the start node, and traverse the graph, and execute each statement until you reach the end statement
+
+	// This can be done by calling the simulate function on each node, which should be implemented by each statement
+	// at the end of that function the statement should navigate to the next node using the connector, and call it's simulate function and so on
+	// until you reach the end statement
+}
 
 //Destructor
 ApplicationManager::~ApplicationManager()
